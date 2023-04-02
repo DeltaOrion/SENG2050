@@ -1,4 +1,5 @@
 # SENG2050
+University of Newcastle - Web Technologies - 2022
 
 SENG2050 or web technologies in a course in the University of Newcastle that focuses on building web applications using Apache Tomcatt. Tomcatt uses the Servlet's which are a server-side web technology that handle an incoming request and use it to produce a dynamic page. Tomcatt is naturally suited towards the MVC archiecture as the individual servlets act as controllers, and the JSP's work as views. All webpage rendering is done on the server-side. 
 
