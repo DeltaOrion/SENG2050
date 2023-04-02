@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/WEB-INF/classes"/>
+        <echo message="Compiling the Java file "/>
+        <javac srcdir="WEB-INF/classes/" includeantruntime="false" destdir="build/WEB-INF/classes">
+            <classpath>
+               <fileset dir="WEB-INF/lib">
+                  <include name="**/*.jar" />
+               </fileset>
+            </classpath>
+        </javac>
+        <echo message="Moving Web Files"/>
+        <copy todir="build/WEB-INF" verbose="true">
+            <fileset dir="WEB-INF" >
+                <include name="**/*.jsp" />
+                <include name="**/*.xml" />
+            </fileset>
+        </copy>
+        <echo message="Moving CSS"/>
+        <mkdir dir="build/css"/>
+        <copy todir="build/css" verbose="true">
+            <fileset dir="css" >
+                <include name="**/*" />
+            </fileset>
+        </copy>
+        <echo message="Moving META-INF"/>
+        <mkdir dir="build/META-INF"/>
+        <copy todir="build/META-INF" verbose="true">
+            <fileset dir="META-INF" >
+                <include name="**/*" />
+            </fileset>
+        </copy>
+        <echo message="Moving javascript"/>
+        <mkdir dir="build"/>
+        <copy todir="build" verbose="true" flatten="true">
+            <fileset dir="./">
+                <include name="**/*.js" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/WEB-INF/classes"/>
+        <echo message="Compiling the Java file "/>
+        <javac srcdir="src/main/java/" includeantruntime="false" destdir="build/WEB-INF/classes">
+            <classpath>
+               <fileset dir="lib">
+                  <include name="**/*.jar" />
+               </fileset>
+            </classpath>
+        </javac>
+        <echo message="Moving Web Files"/>
+        <copy todir="build" verbose="true">
+            <fileset dir="src/main/webapp" >
+                <include name="**/*" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

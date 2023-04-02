@@ -1,0 +1,44 @@
+label {
+    font-size: 18px;
+}
+input[type=text] {
+    width: 50%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.message_header {
+    font-size: 16px;
+    margin: 0;
+}
+
+.time {
+    color: gray;
+}
+
+.err {
+    color: darkgray;
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.message-title {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.message-reply {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.post {
+    padding: 5px;
+}
